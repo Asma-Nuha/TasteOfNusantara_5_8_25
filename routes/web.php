@@ -20,22 +20,20 @@ Route::get('/login', function () {
 //     return view('dbselengkapnya'); // ini merujuk ke halaman welcome.blade.php
 // });
 
+
+
 Route::get('/gado', function () {
     return view('gado'); // ini merujuk ke halaman welcome.blade.php
 });
 
+Route::get('/makanans', [MakananController::class, 'index']);
+Route::get('/makanan/{id}', [MakananController::class, 'show'])->name('makanan.show');
+
 Route::get('/dbselengkapnya', [MakananController::class,'index'])->name('dbselengkapnya');
+
+
 
 Route::get('/', [HomeController::class, 'index']);
 Route::get('/login', [HomeController::class, 'login']);
 Route::get('/about', [HomeController::class, 'welcome']);
 // Route::get('/dbselengkapnya', [HomeController::class, 'dbselengkapnya'])->name('dbselengkapnya');
-Route::get('/gado', function () {return view('gado');})->name('gado');
-Route::get('/ayambetutu', function () {return view('ayambetutu');})->name('ayambetutu');
-Route::get('/bakso', function () {return view('bakso');})->name('bakso');
-Route::get('/nasiliwet', function () {return view('nasiliwet');})->name('nasiliwet');
-Route::get('/rawon', function () {return view('rawon');})->name('rawon');
-Route::get('/sate', function () {return view('sate');})->name('sate');
-Route::get('/sotobanjar', function () {return view('sotobanjar');})->name('sotobanjar');
-Route::get('/ayambetutu', function () {return view('ayambetutu');})->name('ayambetutu');
-Route::get('/rendang', function () {return view('rendang');})->name('rendang');

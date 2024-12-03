@@ -9,8 +9,13 @@ class MakananController extends Controller
 {
     public function index()
     {
-        $makanan = Makanan::all();
+        $makanans = Makanan::all();
         
-        return view('dbselengkapnya', compact('makanan'));
+        return view('dbselengkapnya', compact('makanans'));
+
     }
+
+
+
 }
+
