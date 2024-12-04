@@ -44,6 +44,7 @@ class MakananResource extends Resource
                 Tables\Columns\ImageColumn::make('image'),
                 Tables\Columns\TextColumn::make('place'),
             ])
+
             ->filters([
                 //
             ])
